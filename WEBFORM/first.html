@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Bentel Site</title>
+        <link rel="stylesheet" type="text/css" href="form.css">
+        <script type="text/javascript">
+           function onlyOne(checkbox) {
+            var checkboxes = document.getElementsByName('check')
+            checkboxes.forEach((item) => {
+                if (item !== checkbox) item.checked = false
+            })
+        }
+// ;
+        function matchpassword(form){
+            pw1=form.pswd1.value;
+            pw2=form.pswd2.value;
+            if(pw1=='')
+                alert("please enter password");
+            
+            else if(pw2=='')
+                alert("please enter confirm password");
+            
+            else if(pw1!=pw2){
+                alert("password did not match: please try again...")
+                return false;
+            }
+            else{
+                alert("Information registered successfully: click on Login to Sign in")
+                return true;
+            }
+        }
+
+
+        </script>
+
+
+
+
+    </head>
+<body>
+    
+    <div class="forms-out">
+        <div class="forms-in">
+          <div id="registration-page">
+            <h3>Sign Up</h3>
+            <form onsubmit="return matchpassword(this)">
+            <label>Surname</label>
+            <input type="text" required="required" maxlength="10"/><br/><br>
+            <label>Firstname</label>
+            <input type="text" required="required" maxlength="10"/><br/><br>
+            <label>Middlename</label>
+            <input type="text" required="required" maxlength="10"/><br/><br>
+            <label>Email</label>
+            <input type="email" required="required"/><br/><br>
+            <label>Phone number</label>
+            <input type="number" required="required" maxlength="11"/><br/><br>
+            <label>D.O.B:</label>
+            <imput type="date" required="required"/><br><br>
+            <label for="gender">Gender</label>
+            <select name="gender" id="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select><br><br>
+            <label>Password</label>
+            <input type="password" name="pswd1" required="required" maxlength="16"/><br/><br>
+            <label>confirm password</label>
+            <input type="password" name="pswd2" required="required" maxlength="16"/><br/><br>
+
+            <label for="state">State of Origin</label>
+            <select name="state" id="state">
+                <option>ABUJA FCT</option>
+                <option>ABIA</option>
+                <option>ADAMAWA</option>
+                <option>AKWA IBOM</option>
+                <option>ANAMBRA</option>
+                <option>BAUCHI</option>
+                <option>BAYELSA</option>
+                <option>BENUE</option>
+                <option>BORNO</option>
+                <option>CROSS RIVER</option>
+                <option>DELTA</option>
+                <option>EBONYI</option>
+                <option>EDO</option>
+                <option>EKITI</option>
+                <option>ENUGU</option>
+                <option>GOMBE</option>
+                <option>IMO</option>
+                <option>JIGAWA</option>
+                <option>KADUNA</option>
+                <option>KANO</option>
+                <option>KATSINA</option>
+                <option>KEBBI</option>
+                <option>KOGI</option>
+                <option>KWARA</option>
+                <option>LAGOS</option>
+                <option>NASSARAWA</option>
+                <option>NIGER</option>
+                <option>OGUN</option>
+                <option>ONDO</option>
+                <option>OSUN</option>
+                <option>OYO</option>
+                <option>PLATEAU</option>
+                <option>RIVERS</option>
+                <option>SOKOTO</option>
+                <option>TARABA</option>
+                <option>YOBE</option>
+                <option>ZAMFARA</option>
+            </select><br><br>
+
+                <label>
+            <input type="checkbox" name="check" value="" onclick="onlyOne(this)">
+            Self-employed</label>
+            <label>
+            <input type="checkbox" name="check" value="" onclick="onlyOne(this)">
+            employed</label>
+            <label>
+            <input type="checkbox" name="check" value="" onclick="onlyOne(this)">
+            employed</label>
+            <label>
+            <input type="checkbox" name="check" value="" onclick="onlyOne(this)">
+            Student</label><br><br>
+            
+            <label for="myfile">Upload your CV</label>
+            <input type="file" id="myfile" name="myfile"><br><br>
+            </fieldset>
+            <input type=submit value="submit">
+            <p>Already have an account?</p><button> <a href="index.html"> LOGIN</a></button>
+        </form>
+        </div>
+    </div>
+    </div>
+   
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
